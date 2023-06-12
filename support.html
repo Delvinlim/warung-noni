@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="UIB Delvin Machine Learning Project"
+    />
+    <!--=============== REMIX DE ICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!--=============== FAVICONS ===============-->
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <title>Delvin</title>
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="https://delvinlim.tech" class="nav__logo"><span>Warung</span>Noni</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="/recommend.html" class="nav__link">Recommend Me</a>
+            </li>
+            <li class="nav__item">
+              <a href="/support.html" class="nav__link active-link">Support Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+
+        <!-- Toggle button -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-5-line"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home">
+        <div class="home__shape-small"></div>
+        <div class="home__shape-big"></div>
+
+        <div class="support__container container">
+          <div class="support-container">
+            <span class="support-message">
+              We're not here without your guys support
+            </span>
+            <div class="support-qr">
+              <img
+                src="./assets/img/frame.png"
+                alt="mockup image"
+                class="qr-image"
+              />
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!--=============== GSAP ===============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

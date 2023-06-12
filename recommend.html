@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="UIB Delvin Machine Learning Project"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!--=============== FAVICONS ===============-->
+    <link rel="manifest" href="./assets/img/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/img/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css" />
+    
+    <title>Delvin</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="https://delvinlim.tech" class="nav__logo"> <span>Warung</span>Noni </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="/recommend.html" class="nav__link active-link">Recommend Me</a>
+            </li>
+            <li class="nav__item">
+              <a href="/support.html" class="nav__link">Support Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+
+        <!-- Toggle button -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-5-line"></i>
+        </div>
+      </nav>
+    </header>
+
+    <div id="ui-block"></div>
+    <div id="ui-loader">
+      <span class="loader"></div>
+    </div>
+    <div id="ui-result">
+      <div class="result-box">
+        <div class="result-box-header"><span class="result-box-close">&times;</span></div>
+        <div class="result-box-content">
+          <div class="result-box-content-left">
+            <!-- <img
+              src="./assets/img/splash-screen.png"
+              alt="mockup image"
+              class="result-box-content-image"
+            /> -->
+          </div>
+          <div class="result-box-content-right">
+            <div>
+              <div class="result-box-content-title">
+              </div>
+              <div class="result-box-content-description">
+              </div>
+            </div>
+            <div class="result-box-content-button">
+              <button class="recommend__button gender-part-button">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home">
+        <div class="home__shape-small"></div>
+        <div class="home__shape-big"></div>
+
+        <div class="recommend__container container">
+          <div id="stepper1" class="bs-stepper">
+            <div class="bs-stepper-header" role="tablist">
+              <!-- your steps here -->
+              <div class="step" data-target="#gender-part">
+                <button type="button" class="step-trigger" role="tab" aria-controls="gender-part" id="gender-part-trigger">
+                  <span class="bs-stepper-circle">1</span>
+                  <span class="bs-stepper-label">Gender</span>
+                </button>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#age-part">
+                <button type="button" class="step-trigger" role="tab" aria-controls="age-part" id="age-part-trigger">
+                  <span class="bs-stepper-circle">2</span>
+                  <span class="bs-stepper-label">Age</span>
+                </button>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#amount-part">
+                <button type="button" class="step-trigger" role="tab" aria-controls="amount-part" id="amount-part-trigger">
+                  <span class="bs-stepper-circle">3</span>
+                  <span class="bs-stepper-label">Amount</span>
+                </button>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#food-part">
+                <button type="button" class="step-trigger" role="tab" aria-controls="food-part" id="food-part-trigger">
+                  <span class="bs-stepper-circle">4</span>
+                  <span class="bs-stepper-label">Food</span>
+                </button>
+              </div>
+            </div>
+            <div class="bs-stepper-content">
+              <!-- your steps content here -->
+              <div id="gender-part" class="fade content" role="tabpanel" aria-labelledby="gender-part-trigger">
+                <div class="gender-part-container">
+                  <div class="gender-part-content">
+                    <div id="male-gender-box" class="gender-box" data-name="male">
+                      <img src="/assets/img/male.png" width="100" height="100"/>
+                    </div>
+                    <div id="female-gender-box" class="gender-box" data-name="female">
+                      <img src="/assets/img/female.png" width="100" height="100"/>
+                    </div>
+                  </div>
+                  <div class="gender-part-button-container">
+                    <button class="recommend__button gender-part-button" onclick="nextStepper(2)">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="age-part" class="fade content" role="tabpanel" aria-labelledby="age-part-trigger">
+                <div class="age-part-container">
+                  <div class="age-part-content">
+                    <span id="quantityValue" class="quantity-value"></span>
+                    <span class="input-wrapper">
+                      <button id="decrement">-</button>
+                      <input type="number" value="18" id="quantity" />
+                      <button id="increment">+</button>
+                    </span>
+                  </div>
+                  <div class="gender-part-button-container">
+                    <button class="recommend__button_inactive gender-part-button" onclick="previousStepper(1)">Previous</button>
+                    <button class="recommend__button gender-part-button" onclick="nextStepper(3)">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="amount-part" class="fade content" role="tabpanel" aria-labelledby="amount-part-trigger">
+                <div class="gender-part-container">
+                  <div class="gender-part-content">
+                    <div class="price-input-container">
+                        <label style="margin-bottom: 30px;" for="amount">Amount</label>
+                        <input name="amount" type="text" class="form-control price-input" value="" placeholder="0.00">
+                    </div>
+                  </div>
+                  <div class="gender-part-button-container">
+                    <button class="recommend__button_inactive gender-part-button" onclick="previousStepper(2)">Previous</button>
+                    <button class="recommend__button gender-part-button" onclick="nextStepper(4)">Next</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="food-part" class="fade content" role="tabpanel" aria-labelledby="food-part-trigger">
+                <div class="gender-part-container">
+                  <div class="gender-part-content">
+                    <div class="options" id="options">
+                        <div class="hide-option option" id="hide-option">Select any option.. <i class="fa fa-caret-down"></i></div>
+                    </div>
+                  </div>
+                  <div class="gender-part-button-container">
+                    <button class="recommend__button_inactive gender-part-button" onclick="previousStepper(3)">Previous</button>
+                    <button class="recommend__button gender-part-button" onclick="actionRecommend()">Confirm</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+
+    <!--=============== GSAP ===============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

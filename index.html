@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="UIB Delvin Machine Learning Project"
+    />
+    <!--=============== REMIX DE ICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <title>Delvin</title>
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="https://delvinlim.tech" class="nav__logo"><span>Warung</span>Noni</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="/recommend.html" class="nav__link">Recommend Me</a>
+            </li>
+            <li class="nav__item">
+              <a href="/support.html" class="nav__link">Support Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+
+        <!-- Toggle button -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-5-line"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home">
+        <div class="home__shape-small"></div>
+        <div class="home__shape-big"></div>
+
+        <div class="home__container container">
+          <div class="home__data">
+            <h1 class="home-title">
+              Recommendation
+              <span>Food App</span>
+            </h1>
+            <p class="home-description">
+              Using machine to learn hundreds of data, we will recommend the best food for you using the best algorithm
+              <!-- Busy peoples tends to have no time when it comes to choosing what to eat.
+              That's why we are here, using machine to learn hundreds of data
+              Our recommendation system can recommend u the best food -->
+            </p>
+            <a href="/recommend.html" class="home-button"> Try Now </a>
+          </div>
+
+          <div class="home__images">
+            <div class="home-noni-animate">
+              <img
+                src="./assets/img/mockup.png"
+                alt="mockup image"
+                class="home-noni"
+                style="z-index: 999;"
+              />
+              <img
+                src="./assets/img/splash-screen.png"
+                alt="mockup image"
+                class="home-noni_absolute"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== GSAP ===============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
